@@ -1,10 +1,10 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 24
     buildToolsVersion "25.0.1"
+
     defaultConfig {
-        applicationId "com.shop.animshopbutton"
         minSdkVersion 15
         targetSdkVersion 24
         versionCode 1
@@ -16,14 +16,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    dataBinding {
+        enabled true
+    }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:24.2.1'
-    compile project(':shoplibrary')
-    compile project(':allbaseadapterlibrary')
     compile 'com.android.support:recyclerview-v7:24.1.0'
-    //Adapter终结者 地址：https://github.com/mcxtzhang/all-base-adapter
-//    compile 'com.github.mcxtzhang:all-base-adapter:V1.5.2'
 }

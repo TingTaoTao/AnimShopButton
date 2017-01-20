@@ -1,1 +1,1 @@
-include ':app', ':shoplibrary'
+include ':app', ':shoplibrary', ':allbaseadapterlibrary'
